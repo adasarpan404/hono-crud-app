@@ -1,9 +1,8 @@
 import { Hono } from 'hono'
+import router from './routes'
 
 const app = new Hono()
 
-app.get('/', (c) => {
-  return c.json({ name: 'Hello Hono!' })
-})
+app.route('/', router)
 
 export default app
